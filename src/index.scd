@@ -1,4 +1,4 @@
-HOME(1)
+HOME(7)
 
 # NAME
 

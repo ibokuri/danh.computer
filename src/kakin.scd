@@ -1,4 +1,4 @@
-KAKIN(1)
+KAKIN(7)
 
 # NAME
 
