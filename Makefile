@@ -25,9 +25,11 @@ $(ROFF_DIR)/%.roff: $(INPUT_DIR)/%.scd | $(ROFF_DIR)
 	@scdoc < $< > $@
 
 $(OUTPUT_DIR)/%.html: $(ROFF_DIR)/%.roff | $(OUTPUT_DIR)
+	$(eval filename := $(basename $(notdir $@)))
 	@echo $@
 	@nroff -man $< \
 		| gsed -E -e '/\{\{content\}\}/{r /dev/stdin' -e 'd;}' "$(TEMPLATE_PAGE)" \
+		| gsed -E -e 's/\{\{title\}\}/${filename}/' \
 		| gsed -E -e 's/\x1b\[[^@-~]*[@-~]//g' \
 		| gsed -E -e 's/(\w)  (\w)/\1 \2/g' \
 		> $@

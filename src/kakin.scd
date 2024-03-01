@@ -56,3 +56,7 @@ quam luctus vulputate vel ac lacus. Ut rutrum tortor blandit posuere
 consectetur. Suspendisse vel ante vitae lorem pharetra scelerisque. Sed euismod
 sit amet mi eu tristique.
 
+# REPORTING BUGS
+
+GNU coreutils online help: https://www.gnu.org/software/coreutils/++
+Report any translation bugs to https://translationproject.org/team/
