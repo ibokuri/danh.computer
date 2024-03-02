@@ -2,7 +2,7 @@ DANH.COMPUTER(7)
 
 # NAME
 
-Optimizing JSON serialization in Zig
+_Optimizing_ *JSON* serialization in Zig
 
 # DESCRIPTION
 
