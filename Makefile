@@ -32,6 +32,7 @@ $(OUTPUT_DIR)/%.html: $(ROFF_DIR)/%.roff | $(OUTPUT_DIR)
 		| gsed -E -e 's/\{\{title\}\}/${filename}/' \
 		| gsed -E -e 's/\x1b\[[^@-~]*[@-~]//g' \
 		| gsed -E -e 's/(\w)  (\w)/\1 \2/g' \
+		| gsed -E -e 's/\DANH.COMPUTER\(7\)/<a href="https:\/\/danh.computer">DANH.COMPUTER(7)<\/a>/g' \
 		> $@
 
 $(ROFF_DIR):
