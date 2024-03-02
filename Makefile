@@ -9,12 +9,12 @@ SCD_FILES  := $(wildcard $(SCD_DIR)/*.scd)
 ROFF_FILES := $(patsubst $(SCD_DIR)/%.scd,$(ROFF_DIR)/%.roff,$(SCD_FILES))
 HTML_FILES := $(patsubst $(ROFF_DIR)/%.roff,$(OUTPUT_DIR)/%.html,$(ROFF_FILES))
 
-.PHONY: all clean roff html
+.PHONY: all clean roff build
 
-all: html
+all: build
 
 roff: $(ROFF_FILES)
-html: $(HTML_FILES)
+build: $(HTML_FILES)
 
 clean:
 	@rm -rf $(ROFF_DIR)
@@ -30,6 +30,7 @@ $(ROFF_DIR)/%.roff: $(SCD_DIR)/%.scd | $(ROFF_DIR)
 $(OUTPUT_DIR)/%.html: $(ROFF_DIR)/%.roff | $(OUTPUT_DIR)
 	$(eval filename := $(basename $(notdir $@)))
 	@echo $@
+	@cp $(HTML_DIR)/index.html $(OUTPUT_DIR)/
 	@nroff -man $< \
 		| perl -pe 's/\x1b\[1m(.*?)\x1b\[(22|0)m/<b>\1<\/b>/gs' \
 		| gsed -E -e 's/ +<\/b>/<\/b> /g' \
