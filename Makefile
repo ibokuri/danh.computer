@@ -1,12 +1,12 @@
-INPUT_DIR    := src
-ROFF_DIR     := man
-OUTPUT_DIR   := public
-TEMPLATE_DIR := templates
+SCD_DIR    := scd
+ROFF_DIR   := man
+HTML_DIR   := html
+OUTPUT_DIR := public
 
-TEMPLATE_PAGE := $(TEMPLATE_DIR)/page.html
+TEMPLATE_PAGE := $(HTML_DIR)/page.html
 
-SCD_FILES  := $(wildcard $(INPUT_DIR)/*.scd)
-ROFF_FILES := $(patsubst $(INPUT_DIR)/%.scd,$(ROFF_DIR)/%.roff,$(SCD_FILES))
+SCD_FILES  := $(wildcard $(SCD_DIR)/*.scd)
+ROFF_FILES := $(patsubst $(SCD_DIR)/%.scd,$(ROFF_DIR)/%.roff,$(SCD_FILES))
 HTML_FILES := $(patsubst $(ROFF_DIR)/%.roff,$(OUTPUT_DIR)/%.html,$(ROFF_FILES))
 
 .PHONY: all clean roff html
@@ -20,7 +20,7 @@ clean:
 	@rm -rf $(ROFF_DIR)
 	@rm -rf $(OUTPUT_DIR)
 
-$(ROFF_DIR)/%.roff: $(INPUT_DIR)/%.scd | $(ROFF_DIR)
+$(ROFF_DIR)/%.roff: $(SCD_DIR)/%.scd | $(ROFF_DIR)
 	@echo $@
 	@scdoc < $< > $@
 
@@ -28,7 +28,7 @@ $(OUTPUT_DIR)/%.html: $(ROFF_DIR)/%.roff | $(OUTPUT_DIR)
 	$(eval filename := $(basename $(notdir $@)))
 	@echo $@
 	@nroff -man $< \
-		| gsed -E -e 's/(,|\.|,|\?|\w)  (\w)/\1 \2/g' \
+		| gsed -E -e 's/(,|\.|\?|\w)  (\w)/\1 \2/g' \
 		| perl -pe 's/\x1b\[1m(.*?)\x1b\[(22|0)m/<b>\1<\/b>/gs' \
 		| gsed -E -e 's/ <\/b>/<\/b> /g' \
 		| perl -pe 's/\x1b\[4m(.*?)\x1b\[24m/<u>\1<\/u>/gs' \
