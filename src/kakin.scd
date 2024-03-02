@@ -6,8 +6,8 @@ _Optimizing_ *JSON* serialization in Zig
 
 # DESCRIPTION
 
-Sed suscipit id odio interdum rhoncus. Phasellus vel auctor leo. Suspendisse
-potenti. In enim purus, aliquet a dui quis, sagittis pellentesque mauris.
+Sed suscipit id odio interdum rhoncus. Phasellus vel auctor leo, Suspendisse
+potenti; In enim purus! aliquet a dui quis? sagittis pellentesque mauris#
 Pellentesque a dolor porta, viverra ante nec, consequat ligula. Praesent maximus
 purus mauris, ac mattis metus tempor quis. Aenean porta luctus malesuada. Cras
 facilisis tellus sit amet erat scelerisque sollicitudin.
