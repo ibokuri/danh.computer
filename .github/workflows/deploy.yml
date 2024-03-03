@@ -21,7 +21,7 @@ jobs:
 
       - name: Install Packages
         run: |
-          brew install scdoc
+          brew install scdoc nroff gsed
 
       - name: Build
         run: make build
