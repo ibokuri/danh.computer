@@ -26,13 +26,34 @@ $(ROFF_DIR)/%.roff: $(SCD_DIR)/%.scd | $(ROFF_DIR)
 	@scdoc < $< > $@
 
 $(OUTPUT_DIR)/%.html: $(ROFF_DIR)/%.roff | $(OUTPUT_DIR)
-	$(eval title := $(shell grep -A 2 '\.SH NAME' $< | tail -1))
 	@echo $@
 	@cp $(HTML_DIR)/index.html $(OUTPUT_DIR)/
 	@cp $(CSS_DIR)/style.css $(OUTPUT_DIR)/
-	# NOTE: The replacement of contiguous spaces must come _before_ the
-	#       replacement of underlined text because otherwise the spacing
-	#       between the section header and footer components will be shrunk.
+# The following command obtains the text underneath the NAME section in the
+# current ROFF file. It'll be used as the <title> for the final HTML file.
+	$(eval title := $(shell grep -A 2 '\.SH NAME' $< | tail -1))
+# The following command converts a ROFF file into HTML.
+#
+#   1. Replace *bold* escape sequences with their HTML equivalent.
+#
+#   2. Fix spacing for resulting </b> tags. There might be extra spaces
+#      before the tag and no space after it due to how nroff positions the
+#      escape sequences.
+#
+#   3. Condense contiguous space characters after ',', '.', '?', and words
+#      into a single space. In order to fully justify the text, nroff adds
+#      additional spaces sometimes, so those extra spaces are removed here.
+#
+#   4. Replace *underline* escape sequences with their HTML equivalent.
+#
+#   5. Make the left and right section headers and footer links to the home
+#      page. Note that this must be done _after_ extraneous spaces are
+#      condensed. Otherwise, the spacing before the right header and footer
+#      text will be incorrect.
+#
+#   6. Replace '{{content}}' in the page template with the man page.
+#
+#   7. Replace '{{title}}' in the page template with the man page's name.
 	@nroff -man $< \
 		| perl -pe 's/\x1b\[1m(.*?)\x1b\[(22|0)m/<b>\1<\/b>/gs' \
 		| gsed -E -e 's/ +<\/b>/<\/b> /g' \
