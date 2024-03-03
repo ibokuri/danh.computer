@@ -1,17 +1,6 @@
-@media only screen 
-  and (min-width: 480px)
-  and (max-width: 767px) {
-    body { font-size: 11pt; }
-  }
-@media only screen 
-  and (max-width: 479px) {
-    body { font-size: 8pt; }
-  }
-@media only screen 
-  and (min-device-width : 375px) 
-  and (max-device-width : 667px) {
-    body { font-size: 9.5pt; }
-  }
+@media only screen and (max-width: 479px) {
+    body { font-size: 5.33pt; }
+}
 
 body {
   font-family: monospace;
