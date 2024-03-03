@@ -1,6 +1,7 @@
 SCD_DIR    := scd
 ROFF_DIR   := man
 HTML_DIR   := html
+CSS_DIR    := css
 OUTPUT_DIR := public
 
 TEMPLATE_PAGE := $(HTML_DIR)/page.html
@@ -33,6 +34,7 @@ $(OUTPUT_DIR)/%.html: $(ROFF_DIR)/%.roff | $(OUTPUT_DIR)
 	$(eval filename := $(basename $(notdir $@)))
 	@echo $@
 	@cp $(HTML_DIR)/index.html $(OUTPUT_DIR)/
+	@cp $(CSS_DIR)/style.css $(OUTPUT_DIR)/
 ifeq ($(UNAME_S),Linux)
 	@nroff -man $< \
 		| perl -pe 's/\x1b\[1m(.*?)\x1b\[(22|0)m/<b>\1<\/b>/gs' \
