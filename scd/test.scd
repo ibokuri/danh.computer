@@ -2,7 +2,7 @@ DANH.COMPUTER(7)
 
 # NAME
 
-Test blog post.
+Test Blog Post
 
 # DESCRIPTION
 
