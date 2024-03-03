@@ -36,12 +36,12 @@ $(OUTPUT_DIR)/%.html: $(ROFF_DIR)/%.roff | $(OUTPUT_DIR)
 ifeq ($(UNAME_S),Linux)
 	@nroff -man $< \
 		| perl -pe 's/\x1b\[1m(.*?)\x1b\[(22|0)m/<b>\1<\/b>/gs' \
-		| gsed -r -e 's/ +<\/b>/<\/b> /g' \
-		| gsed -r -e 's/(,|\.|\?|\w) +(\w|<|[0-9])/\1 \2/g' \
+		| sed -r -e 's/ +<\/b>/<\/b> /g' \
+		| sed -r -e 's/(,|\.|\?|\w) +(\w|<|[0-9])/\1 \2/g' \
 		| perl -pe 's/\x1b\[4m(.*?)\x1b\[24m/<u>\1<\/u>/gs' \
-		| gsed -r -e 's/<u>DANH\.COMPUTER<\/u>\(7\)/<a href="https:\/\/danh.computer">DANH.COMPUTER(7)<\/a>/g' \
-		| gsed -r -e '/\{\{content\}\}/{r /dev/stdin' -e 'd;}' "$(TEMPLATE_PAGE)" \
-		| gsed -r -e 's/\{\{title\}\}/${filename}/' \
+		| sed -r -e 's/<u>DANH\.COMPUTER<\/u>\(7\)/<a href="https:\/\/danh.computer">DANH.COMPUTER(7)<\/a>/g' \
+		| sed -r -e '/\{\{content\}\}/{r /dev/stdin' -e 'd;}' "$(TEMPLATE_PAGE)" \
+		| sed -r -e 's/\{\{title\}\}/${filename}/' \
 		> $@
 endif
 ifeq ($(UNAME_S),Darwin)
