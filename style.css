@@ -2,7 +2,7 @@
   body {
     font-family: monospace;
     max-width: 640px; /* Approximation for 80 characters per line, assuming 8px per character */
-    padding: 20px;
+    padding: 10px;
     background-color: #ffffff;
     color: #000;
     white-space: pre-wrap; /* Allows text to wrap and preserve formatting */
@@ -19,7 +19,7 @@ iPhone 13 Pro || 390 x 844 || Default, Portrait and Landscape
       font-size: 6pt;
       max-width: 640px; /* Approximation for 80 characters per line, assuming 8px per character */
       margin: 0 auto;
-      padding: 7px;
+      padding: 7.1px;
       background-color: #ffffff;
       color: #000;
       white-space: pre-wrap; /* Allows text to wrap and preserve formatting */
@@ -33,7 +33,7 @@ iPhone 13 Pro || 390 x 844 || Default, Portrait and Landscape
       font-size: 6pt;
       max-width: 640px; /* Approximation for 80 characters per line, assuming 8px per character */
       margin: 0 auto;
-      padding: 7px;
+      padding: 7.1px;
       background-color: #ffffff;
       color: #000;
       white-space: pre-wrap; /* Allows text to wrap and preserve formatting */
@@ -47,7 +47,7 @@ iPhone 13 Pro || 390 x 844 || Default, Portrait and Landscape
       font-size: 6pt;
       max-width: 640px; /* Approximation for 80 characters per line, assuming 8px per character */
       margin: 0 auto;
-      padding: 7px;
+      padding: 7.1px;
       background-color: #ffffff;
       color: #000;
       white-space: pre-wrap; /* Allows text to wrap and preserve formatting */
@@ -64,7 +64,7 @@ iPhone 15 Pro || 393 x 852 || Default, Portrait and Landscape
       font-size: 6pt;
       max-width: 640px; /* Approximation for 80 characters per line, assuming 8px per character */
       margin: 0 auto;
-      padding: 7px;
+      padding: 7.1px;
       background-color: #ffffff;
       color: #000;
       white-space: pre-wrap; /* Allows text to wrap and preserve formatting */
@@ -78,7 +78,7 @@ iPhone 15 Pro || 393 x 852 || Default, Portrait and Landscape
       font-size: 6pt;
       max-width: 640px; /* Approximation for 80 characters per line, assuming 8px per character */
       margin: 0 auto;
-      padding: 7px;
+      padding: 7.1px;
       background-color: #ffffff;
       color: #000;
       white-space: pre-wrap; /* Allows text to wrap and preserve formatting */
@@ -92,7 +92,7 @@ iPhone 15 Pro || 393 x 852 || Default, Portrait and Landscape
       font-size: 6pt;
       max-width: 640px; /* Approximation for 80 characters per line, assuming 8px per character */
       margin: 0 auto;
-      padding: 7px;
+      padding: 7.1px;
       background-color: #ffffff;
       color: #000;
       white-space: pre-wrap; /* Allows text to wrap and preserve formatting */
