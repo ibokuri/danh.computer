@@ -11,8 +11,10 @@ nav ul, footer ul {
   body {
     font-family: monospace;
     max-width: 610.5px;
+    margin-top: 0px;
     margin-bottom: 0px;
     padding: 10px;
+    padding-top: 0px;
     padding-bottom: 0px;
     background-color: #ffffff;
     color: #000;
