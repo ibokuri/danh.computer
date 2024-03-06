@@ -1,14 +1,12 @@
-/* Global custom properties for easy theme management */
 :root {
   --font-family-main: monospace;
   --font-size-small: 5.7pt;
-  --padding: 7.1px;
+  --padding-small: 7.1px;
   --background-color: #ffffff;
   --text-color: #000;
   --max-width: 610.5px;
 }
 
-/* Base styles for navigation and footer lists */
 nav ul,
 footer ul {
   display: flex;
@@ -19,32 +17,20 @@ footer ul {
   max-width: var(--max-width);
 }
 
-/* Base styles for <body> applicable on devices wider than 1200px */
-@media only screen and (min-device-width: 1200px) {
-  body {
-    font-family: var(--font-family-main);
-    max-width: var(--max-width);
-    margin: 0;
-    padding: 10px 10px 0 10px; /* Simplified padding */
-    background-color: var(--background-color);
-    color: var(--text-color);
-    white-space: pre-wrap;
-    word-wrap: break-word;
-  }
+body {
+  font-family: var(--font-family-main);
+  max-width: var(--max-width);
+  margin: 0;
+  padding: 10px 10px 0 10px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
-/* iPhone 13 Pro and iPhone 15 Pro Portrait and Landscape */
-@media only screen and (min-width: 390px) and (max-width: 844px),
-       only screen and (min-width: 393px) and (max-width: 852px) {
+@media screen and (max-width: 400px) {
   body {
-    font-family: var(--font-family-main);
+    padding: var(--padding-small) var(--padding-small) 0 var(--padding-small);
     font-size: var(--font-size-small);
-    max-width: var(--max-width);
-    margin: 0;
-    padding: var(--padding) var(--padding) 0 var(--padding); /* Simplified and using variables */
-    background-color: var(--background-color);
-    color: var(--text-color);
-    white-space: pre-wrap;
-    word-wrap: break-word;
   }
 }
