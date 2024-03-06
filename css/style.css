@@ -1,4 +1,4 @@
-nav ul {
+nav ul, footer ul {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
