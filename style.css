@@ -18,8 +18,8 @@ nav ul, footer ul {
     padding-bottom: 0px;
     background-color: #ffffff;
     color: #000;
-    white-space: pre-wrap; /* Allows text to wrap and preserve formatting */
-    word-wrap: break-word; /* Ensures long words do not overflow */
+    white-space: pre-wrap;
+    word-wrap: break-word;
   }
 }
 
@@ -27,44 +27,53 @@ nav ul, footer ul {
 iPhone 13 Pro || 390 x 844 || Default, Portrait and Landscape
 ================================================================================ */
 @media only screen and (min-width: 390px) and (max-width: 844px) {
-    body { 
-      font-family: monospace;
-      font-size: 6pt;
-      max-width: 640px; /* Approximation for 80 characters per line, assuming 8px per character */
-      margin: 0 auto;
-      padding: 7.1px;
-      background-color: #ffffff;
-      color: #000;
-      white-space: pre-wrap; /* Allows text to wrap and preserve formatting */
-      word-wrap: break-word; /* Ensures long words do not overflow */
+  body { 
+    font-family: monospace;
+    font-size: 5.7pt;
+    max-width: 610.5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 7.1px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: #ffffff;
+    color: #000;
+    white-space: pre-wrap;
+    word-wrap: break-word;
   }
 }
 
 @media only screen and (min-width: 390px) and (max-width: 844px) and (orientation: portrait) { 
-    body { 
-      font-family: monospace;
-      font-size: 6pt;
-      max-width: 640px; /* Approximation for 80 characters per line, assuming 8px per character */
-      margin: 0 auto;
-      padding: 7.1px;
-      background-color: #ffffff;
-      color: #000;
-      white-space: pre-wrap; /* Allows text to wrap and preserve formatting */
-      word-wrap: break-word; /* Ensures long words do not overflow */
+  body { 
+    font-family: monospace;
+    font-size: 5.7pt;
+    max-width: 610.5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 7.1px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: #ffffff;
+    color: #000;
+    white-space: pre-wrap;
+    word-wrap: break-word;
   }
 }
 
 @media only screen and (min-width: 390px) and (max-width: 844px) and (orientation: landscape) { 
-    body { 
-      font-family: monospace;
-      font-size: 6pt;
-      max-width: 640px; /* Approximation for 80 characters per line, assuming 8px per character */
-      margin: 0 auto;
-      padding: 7.1px;
-      background-color: #ffffff;
-      color: #000;
-      white-space: pre-wrap; /* Allows text to wrap and preserve formatting */
-      word-wrap: break-word; /* Ensures long words do not overflow */
+  body { 
+    font-family: monospace;
+    font-size: 5.7pt;
+    max-width: 610.5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 7.1px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: #ffffff;
+    color: #000;
+    white-space: pre-wrap;
+    word-wrap: break-word;
   }
 }
 
@@ -72,44 +81,53 @@ iPhone 13 Pro || 390 x 844 || Default, Portrait and Landscape
 iPhone 15 Pro || 393 x 852 || Default, Portrait and Landscape
 ================================================================================ */
 @media only screen and (min-width: 393px) and (max-width: 852px) {
-    body { 
-      font-family: monospace;
-      font-size: 6pt;
-      max-width: 640px; /* Approximation for 80 characters per line, assuming 8px per character */
-      margin: 0 auto;
-      padding: 7.1px;
-      background-color: #ffffff;
-      color: #000;
-      white-space: pre-wrap; /* Allows text to wrap and preserve formatting */
-      word-wrap: break-word; /* Ensures long words do not overflow */
+  body { 
+    font-family: monospace;
+    font-size: 5.7pt;
+    max-width: 610.5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 7.1px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: #ffffff;
+    color: #000;
+    white-space: pre-wrap;
+    word-wrap: break-word;
   }
 }
 
 @media only screen and (min-width: 393px) and (max-width: 852px) and (orientation: portrait) { 
-    body { 
-      font-family: monospace;
-      font-size: 6pt;
-      max-width: 640px; /* Approximation for 80 characters per line, assuming 8px per character */
-      margin: 0 auto;
-      padding: 7.1px;
-      background-color: #ffffff;
-      color: #000;
-      white-space: pre-wrap; /* Allows text to wrap and preserve formatting */
-      word-wrap: break-word; /* Ensures long words do not overflow */
+  body { 
+    font-family: monospace;
+    font-size: 5.7pt;
+    max-width: 610.5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 7.1px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: #ffffff;
+    color: #000;
+    white-space: pre-wrap;
+    word-wrap: break-word;
   }
 }
 
 @media only screen and (min-width: 393px) and (max-width: 852px) and (orientation: landscape) { 
-    body { 
-      font-family: monospace;
-      font-size: 6pt;
-      max-width: 640px; /* Approximation for 80 characters per line, assuming 8px per character */
-      margin: 0 auto;
-      padding: 7.1px;
-      background-color: #ffffff;
-      color: #000;
-      white-space: pre-wrap; /* Allows text to wrap and preserve formatting */
-      word-wrap: break-word; /* Ensures long words do not overflow */
+  body { 
+    font-family: monospace;
+    font-size: 5.7pt;
+    max-width: 610.5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 7.1px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: #ffffff;
+    color: #000;
+    white-space: pre-wrap;
+    word-wrap: break-word;
   }
 }
 
