@@ -10,6 +10,8 @@ SCD_FILES  := $(wildcard $(SCD_DIR)/*.scd)
 ROFF_FILES := $(patsubst $(SCD_DIR)/%.scd,$(ROFF_DIR)/%.roff,$(SCD_FILES))
 HTML_FILES := $(patsubst $(ROFF_DIR)/%.roff,$(OUTPUT_DIR)/%.html,$(ROFF_FILES))
 
+CNAME := danh.computer
+
 .PHONY: all clean roff build
 
 all: build
@@ -27,6 +29,7 @@ $(ROFF_DIR)/%.roff: $(SCD_DIR)/%.scd | $(ROFF_DIR)
 
 $(OUTPUT_DIR)/%.html: $(ROFF_DIR)/%.roff | $(OUTPUT_DIR)
 	@echo $@
+	@echo $(CNAME) > $(OUTPUT_DIR)/CNAME
 	@cp $(HTML_DIR)/index.html $(OUTPUT_DIR)/
 	@cp $(CSS_DIR)/style.css $(OUTPUT_DIR)/
 
