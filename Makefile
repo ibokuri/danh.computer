@@ -4,7 +4,7 @@ HTML_DIR   := html
 CSS_DIR    := css
 OUTPUT_DIR := public
 
-TEMPLATE_PAGE := $(HTML_DIR)/page.html
+TEMPLATE_FILE := $(HTML_DIR)/template.html
 
 SCD_FILES  := $(wildcard $(SCD_DIR)/*.scd)
 ROFF_FILES := $(patsubst $(SCD_DIR)/%.scd,$(ROFF_DIR)/%.roff,$(SCD_FILES))
@@ -69,7 +69,7 @@ $(OUTPUT_DIR)/%.html: $(ROFF_DIR)/%.roff | $(OUTPUT_DIR)
 		| gsed -E -e 's/ +<\/b>/<\/b> /g' \
 		| gsed -E -e 's/(,|\.|\?|\w) +(\w|<|[0-9])/\1 \2/g' \
 		| perl -pe 's/\x1b\[4m(.*?)\x1b\[24m/<u>\1<\/u>/gs' \
-		| gsed -E -e '/\{\{content\}\}/{r /dev/stdin' -e 'd;}' "$(TEMPLATE_PAGE)" \
+		| gsed -E -e '/\{\{content\}\}/{r /dev/stdin' -e 'd;}' "$(TEMPLATE_FILE)" \
 		| gsed -E -e 's/\{\{title\}\}/${title}/' \
 		| gsed -E -e 's/\{\{date\}\}/${page_date}/' \
 		> $@
