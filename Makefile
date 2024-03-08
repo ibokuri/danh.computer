@@ -29,7 +29,6 @@ $(ROFF_DIR)/%.roff: $(SCD_DIR)/%.scd | $(ROFF_DIR)
 
 $(OUTPUT_DIR)/%.html: $(ROFF_DIR)/%.roff | $(OUTPUT_DIR)
 	@echo $@
-	@echo $(CNAME) > $(OUTPUT_DIR)/CNAME
 	@cp $(HTML_DIR)/index.html $(OUTPUT_DIR)/
 	@cp $(CSS_DIR)/style.css $(OUTPUT_DIR)/
 

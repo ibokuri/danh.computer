@@ -23,10 +23,14 @@ jobs:
         run: |
           brew install coreutils groff gnu-sed scdoc
 
-      - name: Build
+      - name: Build site
         run: make build
 
-      - name: Deploy
+      - name: Add CNAME file
+        run: |
+          echo "danh.computer" > public/CNAME
+
+      - name: Deploy site
         uses: s0/git-publish-subdir-action@develop
         env:
           REPO: self
