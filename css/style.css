@@ -1,10 +1,13 @@
 :root {
   --font-family-main: monospace;
   --font-size-small: 6pt;
+
   --padding-small: 7.1px;
+  --max-width: 610.5px;
+
   --background-color: #ffffff;
   --text-color: #000;
-  --max-width: 610.5px;
+  --link-color: #0000EE;
 }
 
 nav ul,
@@ -32,5 +35,14 @@ body {
   body {
     padding: var(--padding-small) var(--padding-small) 0 var(--padding-small);
     font-size: var(--font-size-small);
+  }
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
   }
 }
