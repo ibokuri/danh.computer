@@ -34,7 +34,6 @@ jobs:
         uses: awalsh128/cache-apt-pkgs-action@latest
         with:
           packages: rename
-          version: 1.0
 
       - name: Make HTML directory
         run: mkdir public
