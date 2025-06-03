@@ -21,7 +21,7 @@ personal website
 
   * `--github`=<u>USERNAME</u>:
     Specifies the GitHub username of the site owner. The default is
-    [ibokuri](https://github.com).
+    [ibokuri](https://github.com/ibokuri).
 
   * `--employer`=<u>COMPANY</u>:
     Specifies the current employer of the site owner. The default is
