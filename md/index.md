@@ -7,8 +7,6 @@ personal website
 <br>
 `jason` [_OPTIONS_]
 
-# Foobar
-
 ## OPTIONS
 
   * `-h`, `--help`:
