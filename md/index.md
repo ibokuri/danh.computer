@@ -7,6 +7,8 @@ personal website
 <br>
 `jason` [_OPTIONS_]
 
+# Foobar
+
 ## OPTIONS
 
   * `-h`, `--help`:
@@ -29,4 +31,4 @@ personal website
 
 ## SEE ALSO
 
-2024-03-10&nbsp;&nbsp;[Test Blog Post](https://danh.computer/test)
+2025-06-02&nbsp;&nbsp;[TODO](https://danh.computer)
