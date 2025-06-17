@@ -30,11 +30,6 @@ jobs:
         with:
           ruby-version: '3.2'
 
-      - name: Install dependencies
-        uses: awalsh128/cache-apt-pkgs-action@latest
-        with:
-          packages: rename
-
       - name: Make HTML directory
         run: mkdir public
 
@@ -51,7 +46,8 @@ jobs:
             ../md/*.md
 
       - name: Rename HTML files
-        run: rename 's/\.1//' public/*.html
+        run: |
+            find public/ -name '*.1.html' -exec sh -c 'mv "$0" "${0%.1.html}.html"' {} \;
 
       - name: Add CNAME file
         run: echo "danh.computer" > public/CNAME
