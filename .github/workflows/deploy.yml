@@ -30,8 +30,10 @@ jobs:
         with:
           ruby-version: '3.2'
 
-      - name: Make HTML directory
-        run: mkdir public
+      - name: Set up HTML directory
+        run: |
+          mkdir public
+          cp -rf static public/
 
       - name: Build site files
         run: |
@@ -48,7 +50,17 @@ jobs:
       - name: Rename HTML files
         run: |
             find public/ -name '*.1.html' -exec sh -c 'mv "$0" "${0%.1.html}.html"' {} \;
+
+      - name: Decorate HTML files
+        run: |
             sed -i 's/<title>.*<\/title>/<title>Jason Phan<\/title>/' public/*.html
+            sed -i '/<head>/a\
+              <link rel="icon" type="image/png" href="/static/favicon/favicon-96x96.png" sizes="96x96" />\
+              <link rel="icon" type="image/svg+xml" href="/static/favicon/favicon.svg" />\
+              <link rel="shortcut icon" href="/static/favicon/favicon.ico" />\
+              <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png" />\
+              <meta name="apple-mobile-web-app-title" content="ROFF" />\
+              <link rel="manifest" href="/static/favicon/site.webmanifest" />' public/*.html
 
       - name: Add CNAME file
         run: echo "phan.computer" > public/CNAME
