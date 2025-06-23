@@ -48,6 +48,7 @@ jobs:
       - name: Rename HTML files
         run: |
             find public/ -name '*.1.html' -exec sh -c 'mv "$0" "${0%.1.html}.html"' {} \;
+            sed -i 's/<title>.*<\/title>/<title>Jason Phan<\/title>/' public/*.html
 
       - name: Add CNAME file
         run: echo "phan.computer" > public/CNAME
